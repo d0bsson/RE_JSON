@@ -3,11 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Friend View Controller-->
+        <!--Friends app with JSON-->
         <scene sceneID="V6F-ff-XrH">
             <objects>
                 <tableViewController id="pkT-yq-Peq" customClass="FriendViewController" customModule="RE_JSON" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8HF-Cm-gYg" kind="show" id="qOx-OB-di4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,19 +34,35 @@
                             <outlet property="delegate" destination="pkT-yq-Peq" id="hb7-l6-CtE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="M6J-ob-hm5"/>
+                    <navigationItem key="navigationItem" title="Friends app with JSON" id="M6J-ob-hm5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9v-SC-rl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.521739130435" y="61.607142857142854"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lG2-Lj-YPl">
+            <objects>
+                <viewController id="8HF-Cm-gYg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JxV-yM-zUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xQx-cx-VPI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RMS-1g-VQz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJc-nD-Dae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Zp-n6-Pg0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vg5-au-dVz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGQ-2q-OZu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" largeTitles="YES" id="OGQ-2q-OZu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

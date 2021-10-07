@@ -14,4 +14,6 @@ struct Friend {
     let photo: String?
 }
 
-
+struct friendsData {
+    let friends: [Friend]
+}

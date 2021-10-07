@@ -14,6 +14,8 @@
 		D726DF2C270C483900DD083B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D726DF2B270C483900DD083B /* Assets.xcassets */; };
 		D726DF2F270C483900DD083B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D726DF2D270C483900DD083B /* LaunchScreen.storyboard */; };
 		D726DF39270C488400DD083B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF38270C488400DD083B /* Friend.swift */; };
+		D726DF40270F0EA900DD083B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF3F270F0EA800DD083B /* Networking.swift */; };
+		D726DF45270F366800DD083B /* FriendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF44270F366800DD083B /* FriendDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D726DF2E270C483900DD083B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D726DF30270C483900DD083B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D726DF38270C488400DD083B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		D726DF3F270F0EA800DD083B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D726DF44270F366800DD083B /* FriendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +62,16 @@
 		D726DF21270C483400DD083B /* RE_JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D726DF38270C488400DD083B /* Friend.swift */,
+				D726DF3F270F0EA800DD083B /* Networking.swift */,
+				D726DF26270C483400DD083B /* FriendViewController.swift */,
+				D726DF44270F366800DD083B /* FriendDetailsViewController.swift */,
 				D726DF22270C483400DD083B /* AppDelegate.swift */,
 				D726DF24270C483400DD083B /* SceneDelegate.swift */,
-				D726DF26270C483400DD083B /* FriendViewController.swift */,
 				D726DF28270C483400DD083B /* Main.storyboard */,
 				D726DF2B270C483900DD083B /* Assets.xcassets */,
 				D726DF2D270C483900DD083B /* LaunchScreen.storyboard */,
 				D726DF30270C483900DD083B /* Info.plist */,
-				D726DF38270C488400DD083B /* Friend.swift */,
 			);
 			path = RE_JSON;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D726DF27270C483400DD083B /* FriendViewController.swift in Sources */,
+				D726DF40270F0EA900DD083B /* Networking.swift in Sources */,
 				D726DF23270C483400DD083B /* AppDelegate.swift in Sources */,
+				D726DF45270F366800DD083B /* FriendDetailsViewController.swift in Sources */,
 				D726DF25270C483400DD083B /* SceneDelegate.swift in Sources */,
 				D726DF39270C488400DD083B /* Friend.swift in Sources */,
 			);

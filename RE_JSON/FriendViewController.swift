@@ -7,12 +7,21 @@
 
 import UIKit
 
+enum UserActions: String, CaseIterable {
+    case drew = "DREW"
+    case max = "MAX"
+    case polina = "Polina"
+}
+
 class FriendViewController: UITableViewController {
     
-    private let friends = ["pastebin", "pastebin", "pastebin"]
-    private let url = "https://pastebin.com/raw/43sXsbvq"
+    let friends = UserActions.allCases
     
-    // MARK: UITableViewDataSource
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         friends.count
     }
@@ -20,9 +29,17 @@ class FriendViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
         let friend = friends[indexPath.row]
-        print(cell)
+        cell.textLabel?.text = friends[indexPath.row].rawValue
+        print(friends[indexPath.row].rawValue)
         return cell
     }
+    
+    // MARK: - UITableViewTableViewDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Network
     
     
 }
