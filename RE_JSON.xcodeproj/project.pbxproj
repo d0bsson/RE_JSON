@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D726DF23270C483400DD083B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF22270C483400DD083B /* AppDelegate.swift */; };
 		D726DF25270C483400DD083B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF24270C483400DD083B /* SceneDelegate.swift */; };
-		D726DF27270C483400DD083B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF26270C483400DD083B /* ViewController.swift */; };
+		D726DF27270C483400DD083B /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF26270C483400DD083B /* FriendViewController.swift */; };
 		D726DF2A270C483400DD083B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D726DF28270C483400DD083B /* Main.storyboard */; };
 		D726DF2C270C483900DD083B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D726DF2B270C483900DD083B /* Assets.xcassets */; };
 		D726DF2F270C483900DD083B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D726DF2D270C483900DD083B /* LaunchScreen.storyboard */; };
+		D726DF39270C488400DD083B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726DF38270C488400DD083B /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D726DF1F270C483400DD083B /* RE_JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RE_JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D726DF22270C483400DD083B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D726DF24270C483400DD083B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D726DF26270C483400DD083B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D726DF26270C483400DD083B /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		D726DF29270C483400DD083B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D726DF2B270C483900DD083B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D726DF2E270C483900DD083B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D726DF30270C483900DD083B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D726DF38270C488400DD083B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				D726DF22270C483400DD083B /* AppDelegate.swift */,
 				D726DF24270C483400DD083B /* SceneDelegate.swift */,
-				D726DF26270C483400DD083B /* ViewController.swift */,
+				D726DF26270C483400DD083B /* FriendViewController.swift */,
 				D726DF28270C483400DD083B /* Main.storyboard */,
 				D726DF2B270C483900DD083B /* Assets.xcassets */,
 				D726DF2D270C483900DD083B /* LaunchScreen.storyboard */,
 				D726DF30270C483900DD083B /* Info.plist */,
+				D726DF38270C488400DD083B /* Friend.swift */,
 			);
 			path = RE_JSON;
 			sourceTree = "<group>";
@@ -137,9 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D726DF27270C483400DD083B /* ViewController.swift in Sources */,
+				D726DF27270C483400DD083B /* FriendViewController.swift in Sources */,
 				D726DF23270C483400DD083B /* AppDelegate.swift in Sources */,
 				D726DF25270C483400DD083B /* SceneDelegate.swift in Sources */,
+				D726DF39270C488400DD083B /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
