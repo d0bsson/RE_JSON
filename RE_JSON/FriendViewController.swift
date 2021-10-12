@@ -7,15 +7,9 @@
 
 import UIKit
 
-enum UserActions: String, CaseIterable {
-    case drew = "DREW"
-    case max = "MAX"
-    case polina = "Polina"
-}
-
 class FriendViewController: UITableViewController {
     
-    let friends = UserActions.allCases
+    var friends: [Friend] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +21,10 @@ class FriendViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as! FriendDetailsViewCell
         let friend = friends[indexPath.row]
-        cell.textLabel?.text = friends[indexPath.row].rawValue
-        print(friends[indexPath.row].rawValue)
+        cell.configureCell(with: friend)
+        
         return cell
     }
     
@@ -40,7 +34,24 @@ class FriendViewController: UITableViewController {
     }
     
     // MARK: - Network
-    
-    
+    private func fetchFriends() {
+        guard let url = URL(string: Networking.shared.url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
+                print(error ?? "No error description")
+                return
+            }
+            
+            do {
+                self.friends = try JSONDecoder().decode([Friend].self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } catch let error {
+                print(error)
+            }
+        }
+    }
 }
 

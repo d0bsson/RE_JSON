@@ -8,10 +8,10 @@
 import Foundation
 
 
-struct Friend {
+struct Friend: Decodable {
     let name: String?
     let skill: String?
-    let photo: String?
+    let photoURL: String?
 }
 
 struct friendsData {
