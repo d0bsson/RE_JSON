@@ -97,6 +97,11 @@
                                         <constraint firstItem="4KX-ql-J8R" firstAttribute="centerY" secondItem="ng3-hS-6jB" secondAttribute="centerY" id="zzh-LH-jbL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="6ay-Wr-KH8" id="rNy-Tf-zKy"/>
+                                    <outlet property="photoImage" destination="j9c-6F-OyE" id="oUL-pY-zsi"/>
+                                    <outlet property="skillLabel" destination="UcN-vC-1YI" id="6N4-GF-lT0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
