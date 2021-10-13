@@ -15,7 +15,7 @@ class FriendViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(friends)
-        tableView.rowHeight = 300
+        tableView.rowHeight = 200
     }
     
     // MARK: - UITableViewDataSource

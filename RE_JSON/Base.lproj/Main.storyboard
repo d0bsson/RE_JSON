@@ -116,7 +116,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="2VK-5X-Kin" id="eYH-oM-YEU"/>
                                     <outlet property="photoImage" destination="j9c-6F-OyE" id="oUL-pY-zsi"/>
+                                    <outlet property="skillLabel" destination="y9t-fE-iOy" id="qti-g0-igD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
