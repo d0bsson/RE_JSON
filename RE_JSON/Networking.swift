@@ -10,7 +10,7 @@ import Foundation
 class Networking {
     static let shared = Networking()
     
-    
+    let url = "https://pastebin.com/raw/43sXsbvq"
     
     init() {}
 }

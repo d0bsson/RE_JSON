@@ -11,7 +11,7 @@ import Foundation
 struct Friend: Decodable {
     let name: String?
     let skill: String?
-    let photoURL: String?
+    let photo: String?
 }
 
 struct friendsData {
