@@ -13,8 +13,8 @@ class FriendViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.rowHeight = 200
+        
     }
     
     // MARK: - UITableViewDataSource
@@ -25,6 +25,7 @@ class FriendViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as! FriendDetailsViewCell
         let friend = friends[indexPath.row]
+        cell.backgroundColor = .systemTeal
         cell.configureCell(with: friend)
         
         return cell

@@ -64,19 +64,59 @@
 		D726DF21270C483400DD083B /* RE_JSON */ = {
 			isa = PBXGroup;
 			children = (
-				D726DF38270C488400DD083B /* Friend.swift */,
-				D726DF3F270F0EA800DD083B /* Networking.swift */,
-				D726DF26270C483400DD083B /* FriendViewController.swift */,
-				D726DF44270F366800DD083B /* FriendDetailsViewCell.swift */,
-				D726DF22270C483400DD083B /* AppDelegate.swift */,
-				D726DF24270C483400DD083B /* SceneDelegate.swift */,
-				D726DF28270C483400DD083B /* Main.storyboard */,
+				D7D0BB8327172967003E518F /* Models */,
+				D7D0BB8527172970003E518F /* Managers */,
+				D7D0BB882717297E003E518F /* ViewControllers */,
+				D7D0BB8B271729A1003E518F /* Support */,
+				D7D0BB8A27172991003E518F /* Storyboards */,
 				D726DF2B270C483900DD083B /* Assets.xcassets */,
-				D726DF2D270C483900DD083B /* LaunchScreen.storyboard */,
 				D726DF30270C483900DD083B /* Info.plist */,
-				D726DF482715950B00DD083B /* StartViewController.swift */,
 			);
 			path = RE_JSON;
+			sourceTree = "<group>";
+		};
+		D7D0BB8327172967003E518F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D726DF38270C488400DD083B /* Friend.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7D0BB8527172970003E518F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D726DF3F270F0EA800DD083B /* Networking.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D7D0BB882717297E003E518F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D726DF26270C483400DD083B /* FriendViewController.swift */,
+				D726DF44270F366800DD083B /* FriendDetailsViewCell.swift */,
+				D726DF482715950B00DD083B /* StartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D7D0BB8A27172991003E518F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D726DF2D270C483900DD083B /* LaunchScreen.storyboard */,
+				D726DF28270C483400DD083B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D7D0BB8B271729A1003E518F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D726DF22270C483400DD083B /* AppDelegate.swift */,
+				D726DF24270C483400DD083B /* SceneDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
