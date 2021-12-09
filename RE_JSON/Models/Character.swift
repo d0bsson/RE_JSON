@@ -8,12 +8,12 @@
 import Foundation
 
 
-struct Friend: Decodable {
+struct Character: Decodable {
     let name: String?
-    let skill: String?
-    let photo: String?
+    let nickname: String?
+    let img: String?
 }
 
-struct friendsData {
-    let friends: [Friend]
+struct characterData {
+    let characters: [Character]
 }

@@ -9,22 +9,23 @@ import UIKit
 
 class FriendViewController: UITableViewController {
     
-    var friends: [Friend] = []
+    var characters: [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
-        
+        fetchCharacters(from: Networking.shared.url)
     }
     
     // MARK: - UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        friends.count
+        characters.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as! FriendDetailsViewCell
-        let friend = friends[indexPath.row]
+        guard let cell = tableView
+                .dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? FriendDetailsViewCell else { return UITableViewCell() }
+        let friend = characters[indexPath.row]
         cell.backgroundColor = .systemTeal
         cell.configureCell(with: friend)
         
@@ -36,24 +37,11 @@ class FriendViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    // MARK: - Network
-    func fetchFriends() {
-        guard let url = URL(string: Networking.shared.url) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            guard let data = data else {
-                print(error ?? "No error description")
-                return
-            }
-            do {
-                self.friends = try JSONDecoder().decode([Friend].self, from: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch let error {
-                print(error)
-            }
-        }.resume()
+    func fetchCharacters(from url: String) {
+        Networking.shared.fetchFriends(from: url) { (character) in
+            self.characters = character
+            self.tableView.reloadData()
+        }
     }
 }
 

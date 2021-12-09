@@ -8,22 +8,11 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    private let url = "https://www.breakingbadapi.com/api/characters"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.title = "Hello!" 
+        navigationItem.title = "Hello!"
     }
-    
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let friendVC = segue.destination as? FriendViewController else { return }
-        friendVC.fetchFriends()
-    }
-    
-
 }

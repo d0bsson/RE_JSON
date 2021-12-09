@@ -13,18 +13,19 @@ class FriendDetailsViewCell: UITableViewCell {
     @IBOutlet weak var skillLabel: UILabel!
     @IBOutlet weak var photoImage: UIImageView!
     
-    var friend: Friend!
+    var character: Character!
     
-    func configureCell(with friend: Friend) {
-        nameLabel.text = friend.name
-        skillLabel.text = friend.skill
-//        DispatchQueue.global().async {
-            guard let url = URL(string: friend.photo ?? "") else { return }
+    func configureCell(with character: Character) {
+        nameLabel.text = character.name
+        skillLabel.text = character.nickname
+        DispatchQueue.global().async {
+            guard let url = URL(string: character.img ?? "") else { return }
             guard let imageData = try? Data(contentsOf: url) else { return }
             
             DispatchQueue.main.async {
                 self.photoImage.image = UIImage(data: imageData)
             }
-//        }
+        }
     }
 }
+
