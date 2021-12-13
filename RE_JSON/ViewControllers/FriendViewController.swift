@@ -10,7 +10,8 @@ import UIKit
 class FriendViewController: UITableViewController {
     
     var characters: [Character] = []
-    
+    var character: Character!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
@@ -24,13 +25,24 @@ class FriendViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView
-                .dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? FriendDetailsViewCell else { return UITableViewCell() }
+                .dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? CharacterTableViewCell else { return UITableViewCell() }
         let friend = characters[indexPath.row]
         cell.backgroundColor = .systemTeal
         cell.configureCell(with: friend)
-        
         return cell
     }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
+//        let character = characters[indexPath.row]
+//
+//        var content = cell.defaultContentConfiguration()
+//        content.text = character.name
+//        content.secondaryText = character.nickname
+//
+//        cell.contentConfiguration = content
+//        return cell
+//    }
     
     // MARK: - UITableViewTableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,10 +50,9 @@ class FriendViewController: UITableViewController {
     }
     
     func fetchCharacters(from url: String) {
-        Networking.shared.fetchFriends(from: url) { (character) in
+        Networking.shared.fetchFriends(from: url) { character in
             self.characters = character
             self.tableView.reloadData()
         }
     }
 }
-

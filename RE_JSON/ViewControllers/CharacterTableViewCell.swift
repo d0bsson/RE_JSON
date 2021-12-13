@@ -7,8 +7,9 @@
 
 import UIKit
 
-class FriendDetailsViewCell: UITableViewCell {
+class CharacterTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var skillLabel: UILabel!
     @IBOutlet weak var photoImage: UIImageView!
@@ -18,6 +19,7 @@ class FriendDetailsViewCell: UITableViewCell {
     func configureCell(with character: Character) {
         nameLabel.text = character.name
         skillLabel.text = character.nickname
+        spinnerView.startAnimating()
         DispatchQueue.global().async {
             guard let url = URL(string: character.img ?? "") else { return }
             guard let imageData = try? Data(contentsOf: url) else { return }

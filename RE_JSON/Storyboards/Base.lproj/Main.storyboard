@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friend" rowHeight="174" id="gm5-8F-Mnd" customClass="FriendDetailsViewCell" customModule="RE_JSON" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friend" rowHeight="174" id="gm5-8F-Mnd" customClass="CharacterTableViewCell" customModule="RE_JSON" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="174"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gm5-8F-Mnd" id="ng3-hS-6jB">
@@ -114,6 +114,10 @@
                                                 <constraint firstAttribute="height" constant="65.5" id="WPK-gc-ZEC"/>
                                             </constraints>
                                         </stackView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-kx-47Q">
+                                            <rect key="frame" x="90" y="77" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="3n8-GO-cK4" firstAttribute="leading" secondItem="j9c-6F-OyE" secondAttribute="trailing" constant="21" id="0yg-8a-o4f"/>
@@ -124,6 +128,7 @@
                                     <outlet property="nameLabel" destination="2VK-5X-Kin" id="eYH-oM-YEU"/>
                                     <outlet property="photoImage" destination="j9c-6F-OyE" id="oUL-pY-zsi"/>
                                     <outlet property="skillLabel" destination="y9t-fE-iOy" id="qti-g0-igD"/>
+                                    <outlet property="spinnerView" destination="1tu-kx-47Q" id="B4u-fp-xNz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

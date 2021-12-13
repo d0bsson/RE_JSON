@@ -33,4 +33,12 @@ class Networking {
             }
         }.resume()
     }
+    
+//    func fetchImage() {
+//        DispatchQueue.global().async {
+//            guard let url = URL(string: self.character.img ?? "") else { return }
+//            guard let imageData = try? Data(contentsOf: url) else { return }
+//        }
+//
+//    }
 }
