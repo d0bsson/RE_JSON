@@ -8,7 +8,6 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var skillLabel: UILabel!
@@ -19,13 +18,15 @@ class CharacterTableViewCell: UITableViewCell {
     func configureCell(with character: Character) {
         nameLabel.text = character.name
         skillLabel.text = character.nickname
-        spinnerView.startAnimating()
         DispatchQueue.global().async {
             guard let url = URL(string: character.img ?? "") else { return }
             guard let imageData = try? Data(contentsOf: url) else { return }
             
             DispatchQueue.main.async {
                 self.photoImage.image = UIImage(data: imageData)
+                self.spinnerView.startAnimating()
+                self.spinnerView.stopAnimating()
+                self.spinnerView.hidesWhenStopped = true
             }
         }
     }

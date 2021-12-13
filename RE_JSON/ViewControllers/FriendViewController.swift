@@ -32,18 +32,6 @@ class FriendViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
-//        let character = characters[indexPath.row]
-//
-//        var content = cell.defaultContentConfiguration()
-//        content.text = character.name
-//        content.secondaryText = character.nickname
-//
-//        cell.contentConfiguration = content
-//        return cell
-//    }
-    
     // MARK: - UITableViewTableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
